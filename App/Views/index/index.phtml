@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <h1>Estou no Index dentro da view.</h1>
+
+    <table border="1">
+        <thead>
+            <th>Usuário</th>
+            <th>E-mail</th>
+        </thead>
+        <tbody>
+            <? foreach($this->view->usuarios as $key => $usuario){ ?>
+                <tr>
+                    <td><?= $usuario['nome'] ?></td>
+                    <td><?= $usuario['email'] ?></td>
+                </tr>
+            <? } ?>
+        </tbody>
+    </table>
+</body>
+</html>
